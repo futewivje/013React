@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#numberinput {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.addthing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.addsym {
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.addsym:hover {
+  background-color: #e1532c;
+}

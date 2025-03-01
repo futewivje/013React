@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Calculator</title>
+  </head>
+  <body>
+    <h2>Array Calculator</h2>
+    <input
+      type="text"
+      id="numberinput"
+      placeholder="Enter numbers, e.g.: 1,2,3"
+    />
+    <button onclick="converttoarray()">Convert</button>
+    <button onclick="calculateAverage()">Average</button>
+
+    <p id="arrayDisplay"></p>
+    <button onclick="findMax()">Max</button>
+    <button onclick="findMin()">Min</button>
+    <button onclick="countElements()">Count</button>
+
+    <p id="resultDisplay"></p>
+    <script>
+      let array = [];
+
+      function converttoarray() {
+        let input = document.getElementById("numberinput").value;
+        numbers = input.split(",").map(Number);
+        document.getElementById("arrayDisplay").textContent =
+          "Array: " + numbers;
+      }
+      function calculateAverage() {
+        let sum = numbers.reduce((a, b) => a + b, 0);
+        document.getElementById("resultDisplay").textContent =
+          "Average: " + sum / numbers.length;
+      }
+      function findMax() {
+        document.getElementById("resultDisplay").textContent =
+          "Max: " + Math.max(...numbers);
+      }
+      function findMin() {
+        document.getElementById("resultDisplay").textContent =
+          "Min: " + Math.min(...numbers);
+      }
+      function countElements() {
+        document.getElementById("resultDisplay").textContent =
+          "Count: " + numbers.length;
+      }
+    </script>
+  </body>
+</html>

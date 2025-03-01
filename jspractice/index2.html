@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="inputbar">
+      <div class="input">
+        <input type="number" id="display1" />
+      </div>
+
+      <div class="input1">
+        <input type="symbol" id="display2" />
+      </div>
+
+      <div class="input2">
+        <input type="number" id="display3" />
+      </div>
+
+      <button onclick="myFunction()">Equal</button>
+
+      <div class="input3">
+        <input type="answer" id="display4" />
+      </div>
+    </div>
+
+    <script>
+      var a, b, c, d;
+      function myFunction() {
+        a = document.getElementById("display1").value;
+        b = document.getElementById("display2").value;
+        c = document.getElementById("display3").value;
+        if (b === "+") {
+          d = a + c;
+        } else if (b === "-") {
+          d = a - c;
+        } else if (b === "*") {
+          d = a * c;
+        } else if (b === "/") {
+          d = a / c;
+        } else {
+          d = "invalid symbol";
+        }
+        document.getElementById("display4").value = d;
+      }
+    </script>
+  </body>
+</html>
